@@ -22,7 +22,9 @@ public class Main {
             int newPositinX = firstX + X[i];
             int newPositionY = firstY + Y[i];
 
-            if (newPositinX == newX && newPositionY == newY) return 1;
+            if (newPositinX == newX && newPositionY == newY ) return 1;
+            if (newPositinX<0 && newPositionY<0) return -1;
+
         }
         return 0;
     }
@@ -42,6 +44,7 @@ public class Main {
             int newY = scanner.nextInt();
             int isTrue = isPosibleMove(firstX, firstY, newX, newY);
             if (isTrue == 1) System.out.println("valid move");
+            if (isTrue==-1) System.out.println("out of board");
             else System.out.println("invalid move");
         }
 
